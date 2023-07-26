@@ -12,7 +12,28 @@ async function showMealDetails(mealId) {
   const mealDetailDiv = document.getElementById(mealId);
   const meal = await fetchMealDetails(mealId);
   mealDetailDiv.innerHTML = `
-    <h2>${meal.strMeal}</h2>
-    <p>${meal.strInstructions}</p>
+  <div style="display:flex;">
+  <h2>${meal.strMeal}</h2>
+  <span class = "close" onclick="closeMealDetails('${mealId}',$event)">close</span>
+  </div>
+  <p>${meal.strInstructions}</p>
   `;
+  console.log(mealDetailDiv);
+  // mealDetailDiv.parentElement.parentNode.removeChild(mealDetailDiv.parentElement.parentNode.getElementsByTagName('h3')[0]);
+  // mealDetailDiv.parentElement.parentElement.style.display='-webkit-inline-box';
+}
+
+function closeMealDetails(mealId,event) {
+  // Prevent the default action of the event (e.g., prevent form submission or link navigation)
+  event.preventDefault();
+
+  // Stop the event from propagating to parent elements
+  event.stopPropagation();
+  const mealDetailDiv = document.getElementById(mealId);
+  console.log(mealDetailDiv);
+  debugger
+  // mealDetailDiv.innerHTML = `
+  // <button class="detail-btn" id="${mealId}" onclick="showMealDetails('${mealId}')">Details</button>
+  // `; 
+  
 }
