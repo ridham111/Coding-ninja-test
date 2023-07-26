@@ -19,15 +19,56 @@ body {
     margin-top: 0;
   }
   
-  .meal-card {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 1rem;
-    margin: 0.5rem 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+ /* Updated CSS for the .meal-card class */
+.meal-card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 1rem;
+  margin: 0.8rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+  background-color: #fff; /* Optional: Set a background color */
+
+  /* Add smooth transition for box-shadow when the card is hovered */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+/* Add hover effect with increased shadow */
+.meal-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
+}
+
+/* Optional: Add some styling for the content inside the card */
+.meal-card img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+}
+
+.meal-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.meal-card button {
+  padding: 0.5rem 1rem;
+  background-color: grey;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.meal-card button:hover {
+  background-color: darkgray;
+}
+
+
+
+/* Optional: Add additional styles for more elegance */
+
   
   img {
     max-width: 100%;
@@ -37,17 +78,43 @@ body {
   
   .favorite-btn,
   .remove-btn {
-    background-color: #007bff;
+    background-color: grey;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    margin-left: 15px !important;
     margin-top: 0.5rem;
+    max-width: 130px;
+    max-height: 40px;
   }
   
   .favorite-btn:hover,
   .remove-btn:hover {
-    background-color: #0056b3;
+    background-color: darkgray;
+  }
+  .mealResults,
+  .favoriteMeals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+  }
+  .detail-btn{
+    max-width: 800px;
+    margin-left: 15px !important;
+  }
+  .fav-icon{
+    margin-left: 10px !important;
+  }
+   .close {
+    margin-left: 88% !important;
+    margin-top: 1%;
+    padding: 0.5rem 0.5rem;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
   }
   
