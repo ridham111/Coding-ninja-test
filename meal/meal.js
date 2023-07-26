@@ -14,13 +14,13 @@ async function showMealDetails(mealId) {
   mealDetailDiv.innerHTML = `
   <div style="display:flex;">
   <h2>${meal.strMeal}</h2>
-  <span class = "close" onclick="closeMealDetails('${mealId}',$event)">close</span>
+  // <span class = "close" onclick="closeMealDetails('${mealId}',$event)">close</span>
   </div>
   <p>${meal.strInstructions}</p>
   `;
   console.log(mealDetailDiv);
-  // mealDetailDiv.parentElement.parentNode.removeChild(mealDetailDiv.parentElement.parentNode.getElementsByTagName('h3')[0]);
-  // mealDetailDiv.parentElement.parentElement.style.display='-webkit-inline-box';
+  mealDetailDiv.parentElement.parentNode.removeChild(mealDetailDiv.parentElement.parentNode.getElementsByTagName('h3')[0]);
+  mealDetailDiv.parentElement.parentElement.style.display='-webkit-inline-box';
 }
 
 function closeMealDetails(mealId,event) {
@@ -29,11 +29,9 @@ function closeMealDetails(mealId,event) {
 
   // Stop the event from propagating to parent elements
   event.stopPropagation();
-  const mealDetailDiv = document.getElementById(mealId);
-  console.log(mealDetailDiv);
-  debugger
+  const mealDetailDiv = document.getElementById(mealId);  
   // mealDetailDiv.innerHTML = `
-  // <button class="detail-btn" id="${mealId}" onclick="showMealDetails('${mealId}')">Details</button>
+  <button class="detail-btn" id="${mealId}" onclick="showMealDetails('${mealId}')">Details</button>
   // `; 
   
 }
