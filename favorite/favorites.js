@@ -9,8 +9,8 @@ function updateFavoritesUI() {
     const favoriteCard = document.createElement('div');
     favoriteCard.classList.add('meal-card');
     favoriteCard.innerHTML = `
-      <img src="${meal.strMealThumb}" alt="${meal.strMeal}">
-      <h3>${meal.strMeal}</h3>
+    <img src="${meal.strMealThumb}" width="200" height="200" alt="${meal.strMeal}">
+    <h3>${meal.strMeal}</h3>
       <button class="remove-btn" onclick="removeFromFavorites('${meal.idMeal}')">Remove from Favorites</button>
     `;
     favoriteMealsDiv.appendChild(favoriteCard);
@@ -42,8 +42,14 @@ function saveFavoritesToLocalStorage() {
 // Initialization: Load favorite meals from localStorage if available
 if (localStorage.getItem('favoriteMeals')) {
   favoriteMeals = JSON.parse(localStorage.getItem('favoriteMeals'));
-  updateFavoritesUI();
+  favoriteMeals.forEach(element => {
+    console.log(element.idMeal,'fav'+(element.idMeal));
+    const fav_element = document.getElementById('fav'+(element.idMeal))
+    console.log(fav_element);
+
+  });
 }
+document.addEventListener('DOMContentLoaded', updateFavoritesUI);
 
 
 function goToSearch(){
