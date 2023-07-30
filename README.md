@@ -1,5 +1,8 @@
 # Todo List App
 
+**Author: Ridham Pansuriya**  
+**Maintainer: Ridham Pansuriya**
+
 This repository contains code for a simple Todo List web application. The app allows users to add, complete, and delete tasks from their to-do list. The application is built using HTML, CSS, and JavaScript.
 
 ## Features
@@ -41,7 +44,6 @@ The app utilizes the following external libraries:
 ## Compatibility
 
 The app has been tested and verified to work on modern web browsers, including Google Chrome, Mozilla Firefox, Microsoft Edge, and Safari.
-
 
 ## Feedback and Contributions
 
