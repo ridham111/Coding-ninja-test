@@ -1,0 +1,170 @@
+/* Add this code to your styles.css file */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.input-container {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.input-container input[type="text"] {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px 0 0 5px;
+  font-size: 16px;
+}
+
+.input-container button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  background-color: #007BFF;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.input-container button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  padding: 12px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li .checkbox {
+  margin-right: 10px;
+}
+
+li .label-text {
+  flex: 1;
+  font-size: 16px;
+}
+
+li .delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+li .delete-btn:hover {
+  background-color: #c82333;
+}
+
+.actions-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.filter-container {
+  display: flex;
+  align-items: center;
+}
+
+.filter-container label {
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+.filter-container select {
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #fff;
+  color: #333;
+}
+
+.actions-container button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions-container button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.actions-container button:hover {
+  background-color: #0056b3;
+  color: #fff;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+  /* Add this code to your styles.css file */
+/* ... Your existing CSS ... */
+
+li .delete-btn {
+background-color: #dc3545;
+color: #fff;
+border: none;
+padding: 5px 10px;
+border-radius: 3px;
+cursor: pointer;
+font-size: 14px;
+transition: background-color 0.3s;
+}
+
+/* Add this to style the delete icon */
+li .delete-btn i {
+pointer-events: none; /* Prevent the icon from blocking the click on the button */
+}
+
+/* Adjust the layout */
+.actions-container {
+display: flex;
+align-items: center;
+justify-content: space-between;
+margin-top: 20px;
+flex-wrap: wrap; /* Allow the buttons to wrap to the next line */
+}
+
+#clear-completed-btn{
+margin-top: 25px;
+}
+/* ... Your existing CSS ... */
