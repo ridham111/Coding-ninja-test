@@ -38,7 +38,7 @@ body {
 
 
 /* Add hover effect with increased shadow */
-.meal-card , .meal-card2:hover {
+.meal-card:hover , .meal-card2:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15); /* Increase shadow on hover */
 }
 
@@ -63,7 +63,7 @@ body {
   cursor: pointer;
 }
 
-.meal-card .meal-card2 button:hover {
+.meal-card button:hover .meal-card2 button:hover {
   background-color: darkgray;
 }
 
