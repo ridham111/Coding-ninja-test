@@ -12,7 +12,7 @@
   <header>
     <h1>Meal App</h1>
     <input type="text" id="searchInput" placeholder="Search for a meal">
-    <button class="tab-button" onclick="goToFavorites()">Favorite</button>
+    <button class="goFavorite" onclick="goToFavorites()"> Go To Favorite</button>
 
   </header>
   <main>
@@ -20,16 +20,11 @@
       <h1 id="header">All Meals</h1>
       <div id="mealResults" class="mealResults" ></div>
     </section>
-    <!-- <section id="favorites" >
-      <h2>My Favorite Meals</h2>
-      <div id="favoriteMeals" class="mealResults"></div>
-    </section> -->
     <section id="mealDetail">
       <!-- ... meal details ... -->
     </section>
   </main>
   <script src="meal/meal.js"></script> <!-- Include the meal.js script here -->
-  <!-- <script src="favorite/favorites.js"></script> Include the favorite.js script here -->
   <script src="app.js"></script>
 </body>
 </html>
